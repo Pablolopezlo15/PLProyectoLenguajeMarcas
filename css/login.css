@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald';
+}
+body{
+  background-color: white;
+  background-image: url(../img/fondo/preview.jpg) ;
+}
+#actual{
+  border-bottom: rgb(49, 133, 212) 5px solid;
+  border-radius: 5px;
+}
+nav{
+  width: 100%;
+  background-color: whitesmoke;
+  margin-top: 0;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  padding: 1.5%;
+}
+nav img{
+  width: 40px; 
+}
+#loginimg{
+  width: 20px; 
+}
+#carrito{
+  width: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul div{
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+
+nav ul li {
+  position: relative;
+}
+  
+nav ul li a {
+  color: black;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul ul {
+  background: whitesmoke;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+  
+nav ul ul ul {
+  border-radius: 0 0 5px 5px;
+  left: 100%;
+  top: 0;
+}
+  
+nav ul ul li {
+  display: block;
+  position: relative;
+  width: 200px;
+}
+  
+nav ul ul li a {
+  color: #000000;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+  
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul li a:hover{
+  color: rgb(49, 133, 212);
+   font-size: x-large;
+  transition: 0.3s;
+}
+  
+nav ul ul li:hover > ul {
+  display: block;
+}
+  
+nav ul ul li:hover {
+  background: whitesmoke;
+}
+/* MENU HAMBURGUESA*/
+
+#menu, #menu-check{
+  display: none;
+}
+@media only screen and (max-width: 700px){
+
+    header div.contenedor nav{
+        display: flex;
+        flex-direction: column;
+        
+  }
+
+  #menu-check:not(:checked) ~ nav{
+    display: none;
+  }
+  #menu-check:checked ~  nav  {
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  #menu-check:checked ~  nav ul {
+    text-align: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+  }
+
+  #menu-check:checked ~  nav ul ul{
+    position: relative;
+    top: 0;
+    left: 29%;
+    height: 100%;
+  }
+  #menu-check:checked ~  nav ul ul ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  #menu-check:checked ~  nav ul div{
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  #menu-check:checked ~ nav ul div li ul{
+    position: relative;
+  }
+  #menu-check:checked ~ nav ul div li ul li{
+    position: relative;
+    top: 0;
+  }
+  #menu{
+    display: block;
+    background-color: whitesmoke;
+    font-size: 1.2em;
+    border: 3px solid rgb(49, 133, 212);
+    border-radius: 0.3em;
+    right: 0.5em;
+    padding: 15px;
+    top: 0.5em;
+    z-index: 9999;
+    position: fixed;
+  }
+  #menu:hover{
+    color: white;
+    background-color: rgb(49, 133, 212);
+  }
+  #menu-cerrar{
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-abrir{
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-cerrar{
+    display: block;
+  }
+
+  
+}
+
+/* ASIDE */
+main div aside{
+  position:fixed;
+  justify-content: left;
+  width: 5%;
+  border-radius: 50px;
+  padding: 0.8%;
+  margin-top: 10%;
+  margin-left: -35%;
+  background-color: whitesmoke;
+  border: #000000 5px solid;
+}
+main div aside ul li img:hover{
+  width: 100%;
+  transition: 0.3s;
+}
+main div aside ul{
+    list-style: none;
+}
+main div aside img {
+  width: 80%;
+  margin-top: 10%;
+}
+main div aside ul li a:hover{
+  color: gray;
+  font-weight: bolder;
+}
+/* Login */
+main{
+  margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+form{
+    margin-top: 40% ;
+}
+
+section {
+    width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+  }
+  
+section article {
+    background-color: gray;
+    padding: 16px;
+    width: 550px;
+    text-align: center;
+}
+    
+section article div {
+    margin-bottom: 10px;
+}
+  
+section article div label {
+    display: flex;
+    margin-left: 5%;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+section article div input {
+  width: 85%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  
+form:last-of-type input{
+  padding: 12px 24px;
+  margin-left: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: #333;
+  color: #fff;
+  cursor: auto;
+}
+  
+#pointer{
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+footer{
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0;
+  background-color: gray;
+  margin-top: 5%;
+}
+footer ul{
+  margin-bottom: 0;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  list-style: none;
+}
+footer ul li{
+  text-decoration: none;
+  color: black;
+  margin: 2%;
+}
+
+footer a:hover{
+  color: rgb(49, 133, 212);
+  font-size: x-large;
+  transition: 0.5s;
+}

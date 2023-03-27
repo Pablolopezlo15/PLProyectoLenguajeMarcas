@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | PL</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav>
+            <ul>
+                <div>
+                    <li><a href="index.html"><img src="img/pllogo.png" alt=""></a></li>
+                </div>
+                <div>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Catálogo</a>
+                        <ul>
+                            <li><a href="hombre.html">Hombre</a></li>
+                            <li><a href="mujer.html">Mujer</a></li>
+                            <li><a href="niños.html">Niños</a></li>
+                            <li><a href="#">Accesorios</a>
+                                <ul>
+                                    <li><a href="mochilas.html" target="">Mochilas</a></li>
+                                    <li><a href="gorras.html" target="">Gorras</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a id="actual" href="contacto.html">Contacto</a></li>
+                </div>
+                <div>
+                    <li><a href="login.html" ><img id="loginimg" src="img/login.png" alt=""></a></li>
+                    <li><a href="mantenimiento.html"><img id="carrito" src="./img/carrito.png" alt=""></a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br>
+    <main>
+        <h1>Contacto</h1>
+        <div>
+        <aside>
+            <ul>
+                <li><a href="https://web.whatsapp.com/"><img src="./img/redes/Whatsapp.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./img/redes/instagram.png" alt=""></a></li>
+                <li><a href="https://es-es.facebook.com/"><img src="./img/redes/facebook.png" alt=""></a></li>
+                <li><a href="https://twitter.com/?lang=es"><img src="./img/redes/twitter.png" alt=""></a></li>
+            </ul>
+        </aside>
+    </div>
+        <section>
+            <form action="">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required placeholder="Tu numbre"><br><br>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="Tu E-mail" required><br><br>
+                <label for="tlf">Teléfono</label>
+                <input type="tel" name="tlf" placeholder="Número de teléfono"><br><br><br>
+                <label for="area">Escríbenos tu problema: </label>
+                <textarea name="area" cols="100" rows="10"  placeholder="Describa brevemente tu situación, nos pondremos en contacto contigo."></textarea><br><br><br>
+                <input type="submit"  id="pointer" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>Pablo López Lozano</li>
+            <li>Todos los derechos reservados &#169;</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

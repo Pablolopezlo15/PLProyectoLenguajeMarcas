@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald';
+}
+body{
+  background-color: white;
+  background-image: url(../img/fondo/preview.jpg) ;
+}
+#actual{
+  border-bottom: rgb(49, 133, 212) 5px solid;
+  border-radius: 5px;
+}
+nav{
+  width: 100%;
+  background-color: whitesmoke;
+  margin-top: 0;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  padding: 1.5%;
+}
+nav img{
+  width: 40px; 
+}
+#loginimg{
+  width: 20px; 
+}
+#carrito{
+  width: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul div{
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+
+nav ul li {
+  position: relative;
+}
+  
+nav ul li a {
+  color: black;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul ul {
+  background: whitesmoke;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+  
+nav ul ul ul {
+  border-radius: 0 0 5px 5px;
+  left: 100%;
+  top: 0;
+}
+  
+nav ul ul li {
+  display: block;
+  position: relative;
+  width: 200px;
+}
+  
+nav ul ul li a {
+  color: #000000;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+  
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul li a:hover{
+  color: rgb(49, 133, 212);
+   font-size: x-large;
+  transition: 0.3s;
+}
+  
+nav ul ul li:hover > ul {
+  display: block;
+}
+  
+nav ul ul li:hover {
+  background: whitesmoke;
+}
+/* MAIN */
+
+main{
+  color:black;
+  text-align: center;
+}
+main div section{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+main div section article img:hover{
+  box-shadow: black 2px 4px 6px ;
+  width: 72.5%;
+  transition: 0.5s;
+
+}
+/* MENU HAMBURGUESA*/
+
+
+
+#menu, #menu-check{
+  display: none;
+}
+@media only screen and (max-width: 700px){
+
+    header div.contenedor nav{
+        display: flex;
+        flex-direction: column;
+  }
+
+  #menu-check:not(:checked) ~ nav{
+    display: none;
+  }
+  #menu-check:checked ~  nav  {
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  #menu-check:checked ~  nav ul {
+    text-align: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+  }
+  #menu-check:checked ~  nav ul li{
+    
+   
+    
+    
+  }
+  #menu-check:checked ~  nav ul ul{
+    position: relative;
+    top: 0;
+    left: 29%;
+    height: 100%;
+  }
+  #menu-check:checked ~  nav ul ul ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  #menu-check:checked ~  nav ul div{
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  #menu-check:checked ~ nav ul div li ul{
+    position: relative;
+  }
+  #menu-check:checked ~ nav ul div li ul li{
+    position: relative;
+    top: 0;
+  }
+  #menu{
+    display: block;
+    background-color: whitesmoke;
+    font-size: 1.2em;
+    border: 3px solid rgb(49, 133, 212);
+    position: absolute;
+    border-radius: 0.3em;
+    right: 0.5em;
+    padding: 15px;
+    top: 0.5em;
+    z-index: 9999;
+  }
+  #menu:hover{
+    color: white;
+    background-color: rgb(49, 133, 212);
+  }
+  #menu-cerrar{
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-abrir{
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-cerrar{
+    display: block;
+  }
+
+  
+}
+/* ASIDE */
+main div aside{
+  position:fixed;
+  justify-content: left;
+  margin-left: 0.5%;
+  width: 5%;
+  border-radius: 50px;
+  padding: 0.8%;
+  background-color: whitesmoke;
+  border: #000000 5px solid;
+}
+main div aside ul li img:hover{
+  width: 100%;
+  transition: 0.3s;
+}
+main div aside ul{
+    list-style: none;
+}
+main div aside img {
+  width: 80%;
+  margin-top: 10%;
+}
+main div aside ul li a:hover{
+  color: gray;
+  font-weight: bolder;
+}
+
+/* GRID CENTRAL */
+
+article{
+  color: white;
+  margin-top: 5%;
+  
+}
+.precio{
+  margin-top: 2%;
+  margin-left: 20%;
+  width: 30%;
+  background-color: white;
+  border-radius: 50px;
+  border: 3px black solid;
+}
+.comprar{
+  margin-top: -8%;
+  margin-left: 35%;
+}
+.comprar > a > input{
+  border: #000000 3px solid;
+  border-radius: 50px;
+  padding: 3%;
+  width: 40%;
+  height: 50px;
+  background-color: rgb(49, 133, 212);
+  cursor: pointer;
+  font-size: large;
+}
+.comprar > a > input:hover{
+  font-weight: bold;
+  background-color: lightgreen;
+  transition: 0.8s;
+} 
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 2%;
+}
+article img{
+  border: #000000 solid 2px;
+  width: 70%;
+}
+p{
+  color: rgb(0, 0, 0);
+}
+h1{
+  margin-top: 5%; 
+  font-weight: bold;
+  display: inline-block;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  padding: 1%;
+}
+h3{
+  color: black;
+}
+
+
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0;
+  background-color: gray;
+  margin-top: 5%;
+}
+footer nav ul{
+  margin-bottom: 0;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+footer nav ul li{
+  text-decoration: none;
+  color: black;
+  margin: 2%;
+}
+
+footer nav a:hover{
+  color: rgb(49, 133, 212);
+  font-size: x-large;
+  transition: 0.5s;
+}
+
+
+
+
+
+/* Ocultar la lista de elementos en pantallas pequeñas */
+@media screen and (max-width: 640px) {
+
+
+
+
+}
+
